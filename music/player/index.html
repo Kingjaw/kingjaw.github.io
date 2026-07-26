@@ -1,0 +1,84 @@
+<html>
+<head>
+    <link rel='stylesheet' href="/container.css">
+    <link rel='stylesheet' href="/music/musicPlayerStyling.css">
+    <title>Music!!</title>
+    <script src="/music/playbarLogic.js"></script>
+    <script src="/common.js"></script>
+<style>
+.musSection{
+    border: solid black 4px;
+    width: 690px;
+    margin-top:50px;
+    margin-left:20px;
+    display: inline-block;
+    vertical-align: top;
+}
+button{
+  text-decoration: none;
+}
+.songNames{
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    border:none;
+    background-color: transparent;
+    display:block;
+    font-size:15px;
+}
+.songNames:hover{
+  color:  rgb(137, 14, 92);
+  -webkit-text-fill-color: rgb(137, 14, 92);
+  -webkit-text-decoration-color: rgb(137, 14, 92); /* Safari */  
+  text-decoration-color:  rgb(137, 14, 92);
+}
+
+.playbarHolder{
+  background-image: url("/music/assets/playbarBackground.png");
+  image-rendering: pixelated;
+  margin-bottom: 30px;
+  margin-right:30px;
+  height:78px;
+  width:485px;
+  border: solid black 4px;
+}
+
+</style>
+</head>
+
+
+<body>
+<div id="navbar-placeholder"></div> 
+
+<audio id = "musicAud" src="/music/assets/songs/BeetThoseGuysUp.mp3" type="audio/mpeg"></audio>
+
+<div class = "musSection">
+
+<img src="/games/assets/thumbnails/donalia3Thumb.png" style="margin:20px; border: solid black 4px;"></img>
+<div id="leftBarStartImg" style="padding-left: 60px;"></div>
+
+
+</div>
+
+<div class = "musSection"style="padding-left:20px; position: fixed;">
+    <h2 id="nowPlaying" >Now Playing: </h2>
+
+    <div class="playbarHolder">
+    <button onclick = "playOrPause()" class = "playButton" style="vertical-align: middle;">
+        <img src = "/music/assets/pageLoadPlayButton.png" id="playButtImg" playMode=0></img>
+    </button>
+    <input type ="range" id ="aud-slider" value="0"max="100" style="vertical-align: middle;"></input>
+    </div>
+
+</div>
+
+</body>
+
+<!--set up scripts-->
+<script>
+setUpAudio();
+loadSongNames();
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<html>
+<head>
+    <link rel='stylesheet' href="/container.css">
+    <title>Music!!</title>
+    <script src="/common.js"></script>
+</head>
+
+
+<body>
+<div id="navbar-placeholder"></div> 
+
+</body>
+<div id="navbar-placeholder"></div> 
+<img class = "centered" src="assets/MusicTitle.png" height = "300" alt = "Games" style="image-rendering: pixelated"></img>
+
+<!--games-->
+<div class=container id = "holder"> 
+  
+</div>
+
+
+<script>
+
+function loadAlbum(album){
+  localStorage.setItem("album",album);
+}
+async function albNames(){
+  var aud = document.getElementById("musicAud");
+  album = "Goblinsurrection OST";
+  const startingPoint=document.getElementById("holder");
+  const jsonFile =await fetch('/music/music.json');
+  if (!jsonFile.ok){
+  throw new Error('didnt load music json');
+  }
+  const text = await jsonFile.text();
+  const mus = JSON.parse(text);
+  //goes through music.json and gets every key to place in the div
+  for (const key in mus){
+    let thumbName=removeSpaces(key);
+      var newAlbum = document.createElement("a");
+      newAlbum.href="player";
+      newAlbum.className="gameThumbnail"
+      newAlbum.innerHTML=`<img src = "assets/thumbnails/${thumbName}.png" alt = "${key}" style ="image-rendering: pixelated;"><p style="line-height:30px;">${key}</p>`;
+      newAlbum.onclick= () => loadAlbum(key);
+      startingPoint.append(newAlbum);
+      
+  }
+}
+albNames();
+
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

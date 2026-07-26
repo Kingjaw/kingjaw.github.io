@@ -1,0 +1,67 @@
+#aud-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  width: 384px;
+}
+
+.playButton {
+    background: none;
+    border: none;
+}
+.playButton img{
+    width:72px;
+    height:72px;
+}
+
+.playButton:focus:not(:focus-visible) {
+  outline: none;
+}
+
+#aud-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+
+  border: none;
+  width: 48px;
+  height: 48px;
+  image-rendering: pixelated;
+  background-image: url('/music/assets/thumbMarker.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+#aud-slider::-moz-range-thumb {
+  border: none;
+  width: 48px;
+  height: 48px;
+  image-rendering: pixelated;
+  background-image: url('/music/assets/thumbMarker.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+#aud-slider::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  
+  height: 48px;
+  image-rendering: pixelated;
+  background-color: transparent;
+    background-repeat: no-repeat;
+  background-image: url('/music/assets/sliderUnfilled.png');
+    background-size: cover;
+}
+
+#aud-slider::-moz-range-track {
+  height: 48px;
+  image-rendering: pixelated;
+  background-color: transparent;
+    background-repeat: no-repeat;
+  background-image: url('/music/assets/sliderUnfilled.png');
+    background-size: cover;
+
+}

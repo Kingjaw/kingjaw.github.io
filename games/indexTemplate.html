@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <link rel='stylesheet' href="/games/pixelStyle.css">
+    <script src="/common.js"></script>
+</head>
+<html>
+    
+    <body>
+        <h1>Game Name</h1>
+        <div id="gamePage-placeholder"></div> 
+        <div id="navbar-placeholder"></div> 
+
+
+        <!--
+        Type
+        Body
+        Here!
+        -->
+        
+        <!--Game page retrival-->
+        <script>
+        
+          // Fetch the navigation component
+          fetch('/games/gamePage.html')
+            .then(response => {
+              // Check if the request was successful
+              if (!response.ok) {
+                throw new Error(`Failed to load game page: ${response.status}`);
+              }
+              return response.text(); // Convert response to text
+            })
+            .then(navHTML => {
+              // Insert the navigation HTML into the placeholder
+              document.getElementById('gamePage-placeholder').innerHTML = navHTML;
+            })
+            .catch(error => {
+              // Log errors (e.g., if nav.html is missing)
+              console.error('Error loading game page:', error);
+            });
+            
+            //Now fetch the play game script
+
+            var playButtonScr= document.createElement('script');
+            playButtonScr.src='/games/gamePage.js';
+            document.getElementById('gamePage-placeholder').appendChild(playButtonScr);
+     
+        
+        
+        </script>
+
+    </body>
+
+</html>
+

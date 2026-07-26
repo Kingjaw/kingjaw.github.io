@@ -1,0 +1,40 @@
+
+<style>
+body {
+    background-image: url('/mainSprites/BG.png');
+}
+
+.image-container {
+  display: grid;
+  place-items: center;
+}
+
+.image-container img {
+  grid-area: 1 / 1;
+}   
+.image-container iframe {
+  grid-area: 1 / 1;
+}   
+.image-container a {
+  grid-area: 1 / 1;
+}   
+.playButton{
+  width: 268px;
+}
+.playButton:hover{
+  width:300px;
+}
+
+</style>
+
+<script>
+document.getElementById("gameTitle").innerHTML="game";
+</script>
+
+<div class="image-container"id="centered">
+  <a href = "#" onclick = "playGame()" id="pButton" style="z-index: 2;">
+      <img class="playButton" alt = "Play button" src = "/games/assets/sprites/PlayButton.png" style ="width: 268px; image-rendering: pixelated; z-index: 2; transform: translate(10px,-23px);"></img>
+  </a>
+    <img src = "/games/assets/sprites/GameOverLay.png" id ="gOverlay" style ="width: 960px; image-rendering: pixelated; z-index: 1;"></img>
+</div>
+
