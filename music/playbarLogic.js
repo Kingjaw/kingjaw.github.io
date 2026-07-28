@@ -89,12 +89,13 @@ for (let i =0; i<gotSong.length;i++){
     aud.src= "https://pub-a04f62f55abb44a9b4a9bbd2c1262dc7.r2.dev/GoblinFightClub.mp3";
 
 songsArr.forEach(song => {
+    //Uses song[0] because of structure of the Json
     var newSong = document.createElement("button");
     newSong.style="color: black;";
     newSong.className="songNames"
-    newSong.innerHTML=`<h2 >${song}</h2>`;
+    newSong.innerHTML=`<h2 >${song[0]}</h2>`;
     newSong.href=`/music/player`;
-    newSong.onclick= () => loadSong(song);
+    newSong.onclick= () => loadSong(song[0]);
     startingPoint.append(newSong);
 });
 var nowPlaying=document.getElementById("nowPlaying");

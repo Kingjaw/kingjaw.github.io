@@ -62,7 +62,7 @@
 ,   "Brad (Seas of Luxidoor)":{"power": 3, "sociability": 2, "empathy": 6, "sanity": 5,"image":"brad.png",
     "desc": "You're a very forgettable person."
 }
-,   "Goblin (Goblinsurrection)":{"power": 10, "sociability": 8, "empathy": 10, "sanity": 9,"image":"goblin.png",
+,   "Goblin (Goblinsurrection)":{"power": 10, "sociability": 10, "empathy": 10, "sanity": 10,"image":"goblin.png",
     "desc": "You are a true goblin. You have power beyond compare."
 }
 
