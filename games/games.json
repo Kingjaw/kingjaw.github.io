@@ -1,0 +1,19 @@
+{
+      "Goblinsurrection": {"thumbnail":"Goblinsurrection.png","type":"strategy"}
+    , "Orbito": {"thumbnail":"Orbito.png","type":"strategy"}
+    , "Summoner Showdown": {"thumbnail":"SummonerShowdown.png","type":"strategy"}
+    , "Yoho Project": {"thumbnail":"YohoProject.png", "type":"action"}
+    , "Yoho Project 2": {"thumbnail":"YohoProject2.png","type":"action"}
+    , "Uno City": {"thumbnail":"UnoCity.png", "type":"strategy"}
+    , "The Scary Zoo": {"thumbnail":"TheScaryZoo.png","type":"action"}
+    , "Advent": {"thumbnail":"Advent.png","type":"action"}
+    , "Donalia": {"thumbnail":"Donalia.png","type":"action"}
+    , "Donalia 2": {"thumbnail":"Donalia2.png","type":"action-strategy"}
+    , "Donalia 3": {"thumbnail":"Donalia3.png","type":"action"}
+    , "Bullet Frog": {"thumbnail":"BulletFrog.png","type":"strategy"}
+    , "Little Alien": {"thumbnail":"LittleAlien.png","type":"action"}
+    , "Jark RPG": {"thumbnail":"JarkRPG.png","type":"action"}
+    , "": {"thumbnail":"JarkRPG.png","type":"action"}
+
+
+}

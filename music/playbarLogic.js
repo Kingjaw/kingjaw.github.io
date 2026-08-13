@@ -80,13 +80,8 @@ const mus = JSON.parse(text);
 var songsArr=mus[album][0];
 
 let gotSong=songsArr[0];
-let curSong="";
-for (let i =0; i<gotSong.length;i++){
-    if (gotSong[i]!=" "){
-        curSong+=gotSong[i];
-    }
-}
-    aud.src= "https://pub-a04f62f55abb44a9b4a9bbd2c1262dc7.r2.dev/GoblinFightClub.mp3";
+
+aud.src= `https://assets.kingjaw.com/${removeSpaces(album)}/${removeSpaces(gotSong)}.mp3`;
 
 songsArr.forEach(song => {
     var newSong = document.createElement("button");
@@ -106,18 +101,11 @@ async function loadSong(song){
   var aud = document.getElementById("musicAud");
   var plause = document.getElementById("playButtImg");
   var slid = document.getElementById("aud-slider");
+  var album = localStorage.getItem("album");
   localStorage.setItem('song',song)
   slid.value=0;  
   aud.currentTime=0;
-
-    let curSong="";
-    for (let i =0; i<song.length;i++){
-        if (song[i]!=" "){
-            curSong+=song[i];
-        }
-    }
-
-    aud.src= "https://pub-a04f62f55abb44a9b4a9bbd2c1262dc7.r2.dev/GoblinFightClub.mp3";
+  aud.src= `https://assets.kingjaw.com/${removeSpaces(album)}/${removeSpaces(song)}.mp3`;
   
   slid.value=0;
 

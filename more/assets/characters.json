@@ -1,0 +1,70 @@
+{
+    "Jark (Jark RPG)":{"power": 11, "sociability": 11, "empathy": 0, "sanity": 11,"image":"jark.png",
+    "desc": "You are jark."
+}
+,   "Edgy Kid (Donalia)":{"power": 7, "sociability": 2, "empathy": 3, "sanity": 4,"image":"edgyKid.png",
+    "desc": "You are super edgy and cool. You don't give a freaking crap about rules, you only live for yourself."
+}
+,   "Shroom (Donalia)":{"power": 7, "sociability": 6, "empathy": 1, "sanity": 0,"image":"shroom.png",
+    "desc": "You are a generally evil person. Your insanity is unexplainable, but these bars are unobtainable. Yeah. Uh huh. Shrooms the name but rapping's the game. Everyone else is boring and lame. I'm in this dumpster don't care about no young sir I eat these rhymes for breakfast every day"
+}
+,   "Nerdy Kid (Donalia 2)":{"power": 4, "sociability": 2, "empathy": 5, "sanity": 10,"image":"nerdyKid.png",
+    "desc": "You're a bright and talented young man with a big future ahead. Also a bit of a nerd."
+}
+,   "Sporty Kid (Donalia 3)":{"power": 9, "sociability": 8, "empathy": 8, "sanity": 5,"image":"sportyKid.png",
+    "desc": "You may be powerful, but most importantly, you are kind."
+} 
+,   "Ace D. Atlanta (Atlantis Risen)":{"power": 7, "sociability": 7, "empathy": 6, "sanity": 5,"image":"aceDAtlanta.png",
+    "desc": "The greatest character ever concieved."
+}
+,   "Alien (Little Alien)":{"power": 3, "sociability": 6, "empathy": 5, "sanity": 5,"image":"alien.png",
+    "desc": "You're a frail creature in a cruel world of evil people."
+}
+,   "Axel (Summoner Showdown)":{"power": 9, "sociability": 6, "empathy": 2, "sanity": 5,"image":"axel.png",
+    "desc": "Number 1 alchemy fan."
+}
+,   "Umbra (Summoner Showdown)":{"power": 9, "sociability": 6, "empathy": 4, "sanity": 6,"image":"umbra.png",
+    "desc": "Number 1 shadow fan."
+}
+,   "Artificer (The Artificer)":{"power": 8, "sociability": 6, "empathy": 7, "sanity": 4,"image":"artificer.png",
+    "desc": "You enjoy invention. You're a creative person."
+}
+,   "Blue Square (The adventures of a Blue square)":{"power": 5, "sociability": 5, "empathy": 5, "sanity": 5,"image":"blueSquare.png",
+    "desc": "You're a completely average person. A \"square\", some might say."
+}
+,   "Bullet Frog (Bullet Frog)":{"power": 6, "sociability": 5, "empathy": 4, "sanity": 5,"image":"bulletFrog.png",
+    "desc": "You're a very free spirit. You would probably eat a gun if it came down to it."
+}
+,   "Captain Beard (Yoho Project)":{"power": 6, "sociability": 8, "empathy": 6, "sanity": 6,"image":"captainBeard.png",
+    "desc": "You're a jolly good fellow with a liking to treasure. Yo ho ho!"
+}
+,   "Dav (Break the Code)":{"power": 6, "sociability": 7, "empathy": 6, "sanity": 5,"image":"dav.png",
+    "desc": "You're a bald middle aged guy."
+}
+,   "Emilia (The Cafe at 3 AM)":{"power": 5, "sociability": 6, "empathy": 8, "sanity": 2,"image":"emilia.png",
+    "desc": "You tend to end up in crazy and wacky situations, but you persevere anyways."
+}
+,   "Giraffe Guy (The Scary Zoo)":{"power": 8, "sociability": 2, "empathy": 0, "sanity": 2,"image":"giraffeGuy.png",
+    "desc": "You are evil and hunt down children for sport. You sicko."
+}
+,   "Teleninja (Teleninja)":{"power": 6, "sociability": 6, "empathy": 3, "sanity": 6,"image":"teleninja.png",
+    "desc": "You are a longtime descendant of the chinese mafia."
+}
+,   "The Knight (Jump Knight)":{"power": 6, "sociability": 6, "empathy": 4, "sanity": 3,"image":"theKnight.png",
+    "desc": "You are brash and often act without thinking. This doesn't end well."
+}
+,   "Hippo Hooligan (The Scary Zoo)":{"power": 7, "sociability": 8, "empathy": 4, "sanity": 4,"image":"hippoHooligan.png",
+    "desc": "You're just a chill guy who likes making puzzles and games."
+}
+,   "Flipcube (Flipside)":{"power": 2, "sociability": 5, "empathy": 5, "sanity": 5,"image":"flipCube.png",
+    "desc": "You may seem harmless, but you have a secret side of yourself where you're actually evil and terrifying."
+}
+,   "Brad (Seas of Luxidoor)":{"power": 3, "sociability": 2, "empathy": 6, "sanity": 5,"image":"brad.png",
+    "desc": "You're a very forgettable person."
+}
+,   "Goblin (Goblinsurrection)":{"power": 10, "sociability": 10, "empathy": 10, "sanity": 10,"image":"goblin.png",
+    "desc": "You are a true goblin. You have power beyond compare."
+}
+
+
+}
