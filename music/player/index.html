@@ -20,6 +20,7 @@ button{
 .songNames{
     text-decoration: underline;
     text-decoration-thickness: 3px;
+    text-align: left;
     border:none;
     background-color: transparent;
     display:block;
@@ -42,6 +43,12 @@ button{
   border: solid black 4px;
 }
 
+.loop{
+    background: none;
+    border:none;
+    margin-bottom: 20px;
+}
+
 </style>
 </head>
 
@@ -53,21 +60,25 @@ button{
 
 <div class = "musSection">
 
-<img src="/games/assets/thumbnails/donalia3Thumb.png" style="margin:20px; border: solid black 4px;"></img>
+<img src=""id="albumCover" style="margin:20px; border: solid black 4px;  width: 354px; height: 280px;"></img>
 <div id="leftBarStartImg" style="padding-left: 60px;"></div>
 
 
 </div>
 
 <div class = "musSection"style="padding-left:20px; position: fixed;">
-    <h2 id="nowPlaying" >Now Playing: </h2>
+    <h2 id="nowPlaying">Now playing:</h2>
 
-    <div class="playbarHolder">
+    <div class="playbarHolder"style="display:inline-block; vertical-align:center;">
     <button onclick = "playOrPause()" class = "playButton" style="vertical-align: middle;">
         <img src = "/music/assets/pageLoadPlayButton.png" id="playButtImg" playMode=0></img>
     </button>
     <input type ="range" id ="aud-slider" value="0"max="100" style="vertical-align: middle;"></input>
     </div>
+
+    <button id="loopButton"class="loop" looping=0 style="display:inline-block; vertical-align:center;" onclick="loopToggle()">
+        <img src = "/music/assets/LoopIcon.png" width="90px">
+    </button>
 
 </div>
 

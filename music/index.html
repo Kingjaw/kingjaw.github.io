@@ -22,7 +22,7 @@
 <script>
 
 function loadAlbum(album){
-  localStorage.setItem("album",album);
+  sessionStorage.setItem("album",album);
 }
 async function albNames(){
   var aud = document.getElementById("musicAud");
@@ -36,11 +36,12 @@ async function albNames(){
   const mus = JSON.parse(text);
   //goes through music.json and gets every key to place in the div
   for (const key in mus){
-    let thumbName=removeSpaces(key);
+      let thumbName=mus[key][1]
+      console.log(thumbName)
       var newAlbum = document.createElement("a");
       newAlbum.href="player";
       newAlbum.className="gameThumbnail"
-      newAlbum.innerHTML=`<img src = "assets/thumbnails/${thumbName}.png" alt = "${key}" style ="image-rendering: pixelated;"><p style="line-height:30px;">${key}</p>`;
+      newAlbum.innerHTML=`<img src = "/mainSprites/thumbnails/${thumbName}" alt = "${key}" style ="image-rendering: pixelated;"><p style="line-height:30px;">${key}</p>`;
       newAlbum.onclick= () => loadAlbum(key);
       startingPoint.append(newAlbum);
       
@@ -49,14 +50,7 @@ async function albNames(){
 albNames();
 
 
-
-
-
 </script>
-
-
-
-
 
 </body>
 </html>

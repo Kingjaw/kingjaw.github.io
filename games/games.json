@@ -13,7 +13,18 @@
     , "Bullet Frog": {"thumbnail":"BulletFrog.png","type":"strategy"}
     , "Little Alien": {"thumbnail":"LittleAlien.png","type":"action"}
     , "Jark RPG": {"thumbnail":"JarkRPG.png","type":"action"}
-    , "": {"thumbnail":"JarkRPG.png","type":"action"}
+    , "Murder Virus": {"thumbnail":"MurderVirus.png","type":"action"}
+    , "Geoswap": {"thumbnail":"Geoswap.png","type":"action-strategy"}
+    , "Artificial Unintelligence": {"thumbnail":"ArtificialUnintelligence.png","type":"action-strategy"}
+    , "The Artificer": {"thumbnail":"ArtificialUnintelligence.png","type":"action-strategy"}
+    , "Bearvival": {"thumbnail":"Bearvival.png","type":"action-strategy"}
+    , "Bouncy Bois": {"thumbnail":"BouncyBois.png","type":"action-strategy"}
+    , "Jump Knight": {"thumbnail":"BouncyGuys.png","type":"action"}
+    , "Roboball": {"thumbnail":"Roboball.png","type":"action"}
+    , "The Cafe at 3AM": {"thumbnail":"Cafe3AM.png","type":"action"}
+    , "Final Queen": {"thumbnail":"FinalQueen.png","type":"action-strategy"}
+    , "A Tale Regarding Fairies": {"thumbnail":"ATRF.png","type":"action"}
+    , "Snal": {"thumbnail":"Snal.png","type":"action"}
 
 
 }
