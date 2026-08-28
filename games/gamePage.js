@@ -3,8 +3,8 @@ gameEngine=sessionStorage.getItem("engine");
 
 document.getElementById("titleText").innerHTML=gameName;
 
-history.pushState({ game: remnoveSpaces(gameName) }, "", `/games/${removeSpaces(gameName)}`);
-document.title = gameName;
+//history.pushState({ game: remnoveSpaces(gameName) }, "", `/games/${removeSpaces(gameName)}`);
+//document.title = gameName;
 
 document.getElementById("pButton").setAttribute('onclick',`playGame(removeSpaces('${gameName}'))`);
 
