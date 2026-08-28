@@ -26,7 +26,7 @@
 ,   "Umbra (Summoner Showdown)":{"power": 9, "sociability": 6, "empathy": 4, "sanity": 6,"image":"umbra.png",
     "desc": "Number 1 shadow fan."
 }
-,   "Artificer (The Artificer)":{"power": 8, "sociability": 6, "empathy": 7, "sanity": 4,"image":"artificer.png",
+,   "Artificer (The Artificer)":{"power": 8, "sociability": 6, "empathy": 6, "sanity": 4,"image":"artificer.png",
     "desc": "You enjoy invention. You're a creative person."
 }
 ,   "Blue Square (The adventures of a Blue square)":{"power": 5, "sociability": 5, "empathy": 5, "sanity": 5,"image":"blueSquare.png",

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel='stylesheet' href="/games/pixelStyle.css">
+    <script src="/common.js"></script>
+    <style>
+  .image-container {
+  display: grid;
+  place-items: center;
+}
+
+.image-container img {
+  grid-area: 1 / 1;
+}   
+.image-container iframe {
+  grid-area: 1 / 1;
+}   
+.image-container a {
+  grid-area: 1 / 1;
+}   
+.playButton{
+  width: 268px;
+}
+.playButton:hover{
+  width:300px;
+}
+  </style>
+</head>
+<html>
+    
+    <body>
+        <h1 id = "titleText">Yoho project</h1>
+        <div id="gamePage-placeholder"></div> 
+        <div id="navbar-placeholder"></div> 
+        <!--Game page-->
+        <div class="image-container"id="centered">
+          <button id="pButton" style="z-index: 2; display:contents;">
+            <!--onclick is set programatically with gamePage.js-->
+            <img class="playButton" alt = "Play button" src = "/games/assets/sprites/PlayButton.png" style ="width: 268px; image-rendering: pixelated; z-index: 2; transform: translate(10px,-23px);"></img>
+          </button>
+          <img src = "/games/assets/sprites/GameOverLay.png" id ="gOverlay" style ="width: 960px; image-rendering: pixelated; z-index: 1;"></img>
+        </div>
+
+        <h2 style="margin-left: 40px;" id="instrTxt">Instructions:</h2>
+        <h3 style="margin-left: 80px;" id="instructions"></h3>
+
+    </body>
+    <script src="/games/gamePage.js"></script>
+
+</html>
+

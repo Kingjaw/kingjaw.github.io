@@ -25,23 +25,44 @@ h1{
 
 <!--games-->
 <div class=container id = "gamesHolder">
-  <a href ="Donalia3" class="gameThumbnail" >
-      <img src = "/mainSprites/thumbnails/Donalia3.png" alt = "Donalia 3" style ="image-rendering: pixelated;">
-      <p >Donalia 3</p>
-  </a>
 
-  <a href ="YohoProject" class="gameThumbnail" >
-      <img src = "/mainSprites/thumbnails/Orbito.png" alt = "Yoho Project" style ="image-rendering: pixelated;">
-      <p >Yoho Project</p>
-  </a>
-
-  <a href ="YohoProject2" class="gameThumbnail" >
-      <img src = "/mainSprites/thumbnails/Orbito.png" alt = "Yoho Project 2" style ="image-rendering: pixelated;">
-      <p >Yoho Project 2</p>
-  </a>
-  
 </div>
 
+
+<script>
+
+async function gamNames(){
+  var aud = document.getElementById("musicAud");
+  const holder=document.getElementById("gamesHolder");
+  const jsonFile =await fetch('/games/games.json');
+  if (!jsonFile.ok){
+  throw new Error('didnt load games json');
+  }
+  const text = await jsonFile.text();
+  const gam = JSON.parse(text);
+  //goes through music.json and gets every key to place in the div
+  for (const key in gam){
+    let thumbName=gam[key]["thumbnail"];
+    console.log(thumbName);
+    var newGame = document.createElement("a");
+    newGame.href="game";
+    newGame.className="gameThumbnail";
+    newGame.innerHTML=`<img src = "/mainSprites/thumbnails/${thumbName}" alt = "${key}"
+    style ="image-rendering: pixelated;">
+    <p style="line-height:30px;">${key}</p>`;
+    newGame.onclick= () => goToGame(key,gam[key]["engine"]);
+    holder.append(newGame);
+      
+  }
+}
+gamNames();
+
+function goToGame(game,engine){
+    sessionStorage.setItem('game',game);
+    sessionStorage.setItem('engine',engine);
+
+}
+</script>
 </body>
 
 </html>

@@ -4,8 +4,6 @@
     <title>Music!!</title>
     <script src="/common.js"></script>
 </head>
-
-
 <body>
 <div id="navbar-placeholder"></div> 
 
@@ -17,8 +15,6 @@
 <div class=container id = "holder"> 
   
 </div>
-
-
 <script>
 
 function loadAlbum(album){
@@ -26,7 +22,6 @@ function loadAlbum(album){
 }
 async function albNames(){
   var aud = document.getElementById("musicAud");
-  album = "Goblinsurrection OST";
   const startingPoint=document.getElementById("holder");
   const jsonFile =await fetch('/music/music.json');
   if (!jsonFile.ok){
