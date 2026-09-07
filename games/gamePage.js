@@ -3,13 +3,14 @@ gameEngine=sessionStorage.getItem("engine");
 
 document.getElementById("titleText").innerHTML=gameName;
 
-//history.pushState({ game: remnoveSpaces(gameName) }, "", `/games/${removeSpaces(gameName)}`);
-//document.title = gameName;
+function loadGamePage(gameName){
+  history.pushState({ game: removeSpaces(gameName) }, "", `/games/${removeSpaces(gameName)}`);
+  document.title = gameName;
+}
+
+loadGamePage(gameName);
 
 document.getElementById("pButton").setAttribute('onclick',`playGame(removeSpaces('${gameName}'))`);
-
-console.log(document.getElementById("pButton").getAttribute('onclick'));
-console.log("anythig");
 
 async function fetchInstructions(){
 let insFile=await fetch(`/games/instructions/${removeSpaces(gameName)}.txt`);
@@ -27,28 +28,29 @@ else{
   }
 }
 
-
-
 fetchInstructions();
+
 
 function playGame(game){
   document.getElementById("pButton").remove();
   document.getElementById("gOverlay").remove();
 
   const gameWindow=document.createElement("iframe");
-  
+  console.log("Game Engine: "+gameEngine);
+
   gameWindow.src=`https://assets.kingjaw.com/Games/${game}/index.html`;
   if (gameEngine=="Unity"){
-  gameWindow.width="960"; gameWindow.height="800";
+    gameWindow.width="960"; gameWindow.height="800";
+    console.log("unity width");
   }
   else if (gameEngine=="Scratch"){
-      gameWindow.width="864"; gameWindow.height="648";  
+    gameWindow.width="864"; gameWindow.height="648";  
+    gameWindow.setAttribute("style","margin-top: 70px;");
   }
   gameWindow.scrolling="none";
   gameWindow.frameBorder=0;
   gameWindow.setAttribute("allow","fullscreen");
   gameWindow.setAttribute("allowfullscreen","true");
-  gameWindow.setAttribute("style","margin-top: 70px;");
 
   document.getElementById("centered").appendChild(gameWindow); 
 }

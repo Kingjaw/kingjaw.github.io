@@ -36,3 +36,11 @@ for (let i =0; i<givenText.length;i++){
 }
 return newTex;
 }
+
+function replaceStrPart(mainString,strPart,replacement){
+for (let i=0;i<mainString.length-strPart.length+1;i++){
+    if (mainString.substring(i,i+strPart.length)==strPart){
+        return mainString.substring(0,i).concat(replacement.concat(mainString.substring(i+strPart.length)));
+    }
+}
+}

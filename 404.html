@@ -5,9 +5,43 @@
     <link rel='stylesheet' href="/container.css">
     <script src="/common.js"></script>
 <body>
-<h2>
-    hi
+    <div id="navbar-placeholder"></div> 
+
+<h2 style="margin-left:30px;">
+    Wrong lever!
 </h2>
+    <img src="/mainSprites/Shrug.png"width=150px style="display:inline-block;"></img>
+
 </body>
+<script>
+
+async function loadGameURL(){
+    url=window.location.href.split('/');
+    console.log(window.location.href.split('/'));
+    for (let i=0;i<url.length;i++){
+    if (url[i]=="games"){
+        j=i+1;
+        const jsonFile =await fetch('/games/games.json');
+        if (!jsonFile.ok){
+            throw new Error('didnt load games json');
+        }
+        const text = await jsonFile.text();
+        const gam = JSON.parse(text);
+        for (key in gam){
+        //check if the removed spaces version is equal to whats in the url
+        if (removeSpaces(key)==url[j]){
+            sessionStorage.setItem('game',key);
+            newURL=replaceStrPart(window.location.href,url[j],"game")
+            window.location.replace(newURL);
+            break;
+        }
+        }
+        break;
+    }
+    }
+}
+loadGameURL();
+
+</script>
 
 </html>

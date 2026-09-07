@@ -12,7 +12,7 @@
     , "Donalia 3": {"thumbnail":"Donalia3.png","type":"action","engine":"Unity"}
     , "Bullet Frog": {"thumbnail":"BulletFrog.png","type":"strategy","engine":"Unity"}
     , "Little Alien": {"thumbnail":"LittleAlien.png","type":"action","engine":"Unity"}
-    , "Jark RPG": {"thumbnail":"JarkRPG.png","type":"action","engine":"Unity"}
+    , "Jark RPG": {"thumbnail":"JarkRPG.png","type":"action","engine":"Scratch"}
     , "Murder Virus": {"thumbnail":"MurderVirus.png","type":"action","engine":"Unity"}
     , "Geoswap": {"thumbnail":"Geoswap.png","type":"action-strategy","engine":"Unity"}
     , "Artificial Unintelligence": {"thumbnail":"ArtificialUnintelligence.png","type":"action-strategy","engine":"Unity"}

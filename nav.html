@@ -33,15 +33,24 @@ h1, h2, h3{
   width: 100%;
   top: 0;
   z-index: 100;
+  display:flex;
+  flex-wrap: nowrap;
+  flex-shrink: 1;
 }
 
 .navbar a {
-  float: left;
+  float:left;
   color: #f2f2f2;
   text-align: center;
   padding: 8px 14px;
   text-decoration: none;
   font-size: 17px;
+}
+.navbar img{
+  flex-shrink: 1; /* allow shrinking instead of wrapping/overflowing */
+  min-width: 0;   /* important: overrides flex items' default min-width:auto, which otherwise blocks shrinking below content size */
+  max-width: 100%;
+  height:auto;
 }
 
 @font-face {
@@ -57,12 +66,12 @@ h1, h2, h3{
       <img src="/mainSprites/Kingjaw.png" style ="width: 368px; image-rendering: pixelated;" alt='kingjaw'>
     </a>
     <a href="/games/">
-      <img src="/mainSprites/GamesIcon.png" style ="margin-top: 8px; height: 68px; image-rendering: pixelated;" alt='games'>
+      <img src="/mainSprites/GamesIcon.png" style =" width: 216px; image-rendering: pixelated;" alt='games'>
     </a>
     <a href="/music">
-      <img src="/mainSprites/musicIcon.png" style ="margin-top: 8px; height: 68px; image-rendering: pixelated;" alt='music'>
+      <img src="/mainSprites/musicIcon.png" style =" width: 208px; image-rendering: pixelated;" alt='music'>
     </a>
     <a href="/more">
-        <img src="/mainSprites/FunIcon.png" style ="margin-top: 8px; height: 68px; image-rendering: pixelated;" alt='fun'>
+        <img src="/mainSprites/MoreIcon.png" style =" width: 188px; image-rendering: pixelated;" alt='fun'>
     </a>
 </nav>
