@@ -19,10 +19,11 @@
 }
 .gameThumbnail p{
   margin:0;
-  font-size:22px; 
+  font-size:24px; 
   color:black;
   font-family: pixelBold;
   line-height: 1;
+  width:236px;
 }
 .gameThumbnail:hover p{
   color: black;

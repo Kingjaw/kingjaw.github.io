@@ -1,8 +1,4 @@
-I made most of the stuff, my friend did the character portraits and title screen.
 Controller supported and recommended.
-
 Instructions in game, but in case you skip over them:
-
 Arrow keys to move, X to shoot, Z to focus
-
 Left Stick to move, RT to shoot, LT to focus

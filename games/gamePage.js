@@ -32,6 +32,10 @@ fetchInstructions();
 
 
 function playGame(game){
+  console.log("dofnoisdfadsfnoi");
+  var audio = new Audio('/games/assets/GameStart.wav');
+  audio.play();
+
   document.getElementById("pButton").remove();
   document.getElementById("gOverlay").remove();
 

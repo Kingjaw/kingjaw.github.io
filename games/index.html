@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-      <script src="/common.js"></script>
-    <link rel='stylesheet' href="/container.css">
+  <script src="/common.js"></script>
+  <link rel='stylesheet' href="/container.css">
 <title>Play games</title>
 <style>
 body {
     background-image: url('/mainSprites/BG.png');
 }
-
 h1{
   font-family: pixelBold;
   font-size: 50px;
 }
-
 </style>
-
 </head>
-
 
 <body>
 <div id="navbar-placeholder"></div> 
@@ -40,7 +36,7 @@ async function gamNames(){
   }
   const text = await jsonFile.text();
   const gam = JSON.parse(text);
-  //goes through music.json and gets every key to place in the div
+  //goes through games.json and gets every key to place in the div
   for (const key in gam){
     let thumbName=gam[key]["thumbnail"];
     console.log(thumbName);
@@ -60,7 +56,6 @@ gamNames();
 function goToGame(game,engine){
     sessionStorage.setItem('game',game);
     sessionStorage.setItem('engine',engine);
-
 }
 </script>
 </body>
