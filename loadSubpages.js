@@ -2,9 +2,10 @@
 function randomInt(min, max){
   return Math.round(Math.random()*(max-min))+min;
 }
-async function makeSubpage(){
-  const jsonFile =await fetch('/games/games.json');
-  const holder =document.getElementById("gamesHolder");
+async function makeSubpage(jsonType){
+  //jsonType is either "games" or "music"
+  const jsonFile =await fetch(`/${jsonType}/${jsonType}.json`);
+  const holder =document.getElementById(`${jsonType}Holder`);
     if (!jsonFile.ok){
     throw new Error('didnt load games json');
     }
@@ -19,9 +20,11 @@ async function makeSubpage(){
     }    
     for (let i=0;i<randGames.length;i++){
     let key=randGames[i];
-    let thumbName=gam[key]["thumbnail"];
+    let thumbName="";
+    if (jsonType=="games"){thumbName=gam[key]["thumbnail"];} else{thumbName=gam[key][1];}
     let newGame = document.createElement("a");
-    newGame.href="/games/game";
+     if (jsonType=="games"){newGame.href="/games/game";}
+    else{newGame.href="/music/player"}
     newGame.className="gameThumbnail";
     let cutText=key;
     if (cutText=="A Tale Regarding Fairies"){
@@ -30,13 +33,20 @@ async function makeSubpage(){
     newGame.innerHTML=`<img src = "/mainSprites/thumbnails/${thumbName}" alt = "${key}"
     style ="image-rendering: pixelated;">
     <p style="line-height:30px;">${cutText}</p>`;
-    newGame.onclick= () => goToGame(key,gam[key]["engine"]);
+    if (jsonType=="games"){newGame.onclick= () => goToGame(key,gam[key]["engine"]);}
+    else{newGame.onclick= () => goToSong(key);}
+    
     holder.append(newGame);
   }
 }
-makeSubpage();
+makeSubpage("games");
+makeSubpage("music");
 
 function goToGame(game,engine){
   sessionStorage.setItem('game',game);
   sessionStorage.setItem('engine',engine);
+}
+
+function goToSong(album){
+  sessionStorage.setItem("album",album);
 }

@@ -1,0 +1,4 @@
+<a href ="/games/Donalia3" class="gameThumbnail" >
+      <img src = "/mainSprites/thumbnails/Donalia3.png" alt = "Donalia 3" style ="image-rendering: pixelated;">
+      <p >Donalia 3</p>
+    </a>
