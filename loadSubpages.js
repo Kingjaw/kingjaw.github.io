@@ -40,7 +40,7 @@ async function makeSubpage(jsonType){
   }
 }
 makeSubpage("games");
-makeSubpage("music");
+//makeSubpage("music");
 
 function goToGame(game,engine){
   sessionStorage.setItem('game',game);
